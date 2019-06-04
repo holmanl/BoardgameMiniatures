@@ -30,7 +30,12 @@ mean(yes_minis$avg_rating) - mean(no_minis$avg_rating)
 # it looks like games with miniatures have a higher rating on average
 # let's test to see if difference is statistically significant
 
-# two sample t test with one tail yes > no
+# two sample t test with one tail of yes_minis > no_minis
+t.test(yes_minis$geek_rating, no_minis$geek_rating, alternative = "greater")
+t.test(yes_minis$avg_rating, no_minis$avg_rating, alternative = "greater")
+
+# both methods of rating show that there is a significant difference
+# boardgames with miniatures do indeed have higher ratings than those that don't
 
 # kolmogorov-smirnov test (checks to see if two pops are from the same distribution)
 
