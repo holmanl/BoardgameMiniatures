@@ -3,8 +3,7 @@
 
 library(tidyverse)
 
-setwd("C:/Users/lauraho/Documents/R Code/Boardgames/BoardgamesData.csv")
-df = read_csv("C:/Users/lauraho/Documents/R Code/Boardgames/BoardgamesData.csv")
+df = read_csv("*/BoardgamesData.csv")
 
 # create miniatures column
 df$miniature <- grepl("miniatures", df$category, ignore.case = TRUE)
